@@ -1,0 +1,15 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Martin Began <martin.began@kiwi.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gatsby develop"
+  },
+  "dependencies": {
+    "gatsby": "^2.23.11",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "gatsby-theme-maniacs-blog",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Martin Began <martin.began@kiwi.com>",
+  "license": "MIT"
+}
