@@ -5,7 +5,8 @@
   "author": "Martin Began <martin.began@kiwi.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "gatsby develop"
+    "dev": "gatsby develop",
+    "build": "gatsby build"
   },
   "dependencies": {
     "gatsby": "^2.23.11",
