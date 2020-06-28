@@ -7,16 +7,13 @@ module.exports = {
     },
   },
   plugins: [
-    // 'gatsby-plugin-typescript',
-    // 'gatsby-plugin-react-helmet',
-    // 'gatsby-plugin-material-ui',
-    // {
-    //   resolve: 'gatsby-plugin-material-ui',
-    //   options: {
-    //     stylesProvider: {
-    //       injectFirst: true,
-    //     },
-    //   },
-    // },
+    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: ['Rubik:400,700'],
+        display: 'swap',
+      },
+    },
   ],
 };
