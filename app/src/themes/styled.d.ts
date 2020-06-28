@@ -12,7 +12,9 @@ declare module 'styled-components' {
     colors: {
       red: string;
       yellow: string;
+      gradient: string;
       black: string;
+      divider: string;
       font: string;
     };
   }

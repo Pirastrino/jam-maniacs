@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Divider } from '../Divider';
 
 const Wrapper = styled.div`
   height: 50px;
@@ -24,8 +25,11 @@ const Logo = styled.div`
 
 export const HeaderBar = () => {
   return (
-    <Wrapper>
-      <Logo>MANIACS BRNO</Logo>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Logo>MANIACS BRNO</Logo>
+      </Wrapper>
+      <Divider rainbow />
+    </>
   );
 };
