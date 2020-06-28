@@ -9,7 +9,7 @@ const App = () => {
   return (
     <ThemeProvider theme={useDarkTheme ? darkTheme : lightTheme}>
       <Layout>
-        <p style={{ textAlign: 'center' }}>Welcome clashers!</p>
+        <h1 style={{ textAlign: 'center' }}>Welcome clashers!</h1>
       </Layout>
     </ThemeProvider>
   );

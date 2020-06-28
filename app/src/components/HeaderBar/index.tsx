@@ -25,11 +25,11 @@ const Logo = styled.div`
 
 export const HeaderBar = () => {
   return (
-    <>
+    <div>
       <Wrapper>
         <Logo>MANIACS BRNO</Logo>
       </Wrapper>
       <Divider rainbow />
-    </>
+    </div>
   );
 };

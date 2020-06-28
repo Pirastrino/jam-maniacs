@@ -16,6 +16,10 @@ declare module 'styled-components' {
       black: string;
       divider: string;
       font: string;
+      bg: {
+        body?: string;
+        footer?: string;
+      };
     };
   }
 }

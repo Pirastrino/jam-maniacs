@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { HeaderBar } from './HeaderBar';
+import { Footer } from './Footer';
 import 'modern-normalize';
 
 const GlobalStyle = createGlobalStyle`
@@ -8,17 +9,26 @@ const GlobalStyle = createGlobalStyle`
 
   body {
       color: ${props => props.theme.colors.font};
+      background-color: ${props => props.theme.colors.bg.body};
       font-family: Rubik,  sans-serif;
       font-size: 16px;
   }
 `;
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+`;
+
 export const Layout: FunctionComponent = ({ children }) => {
   return (
-    <>
+    <Wrapper>
       <GlobalStyle />
       <HeaderBar />
       {children}
-    </>
+      <Footer />
+    </Wrapper>
   );
 };

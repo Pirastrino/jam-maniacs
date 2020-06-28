@@ -7,6 +7,10 @@ export const lightTheme: DefaultTheme = {
     ...baseTheme.colors,
     ...{
       font: '#2C2C2C',
+      bg: {
+        body: '#FAFAFA',
+        footer: '#E0E0E0',
+      },
     },
   },
 };

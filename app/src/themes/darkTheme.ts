@@ -7,6 +7,10 @@ export const darkTheme: DefaultTheme = {
     ...baseTheme.colors,
     ...{
       font: '#E9E9E9',
+      bg: {
+        body: '#35363A',
+        footer: '#2C2C2C',
+      },
     },
   },
 };
