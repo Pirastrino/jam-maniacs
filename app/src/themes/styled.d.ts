@@ -1,6 +1,5 @@
-// import original module declarations
 import 'styled-components';
-// and extend them!
+
 declare module 'styled-components' {
   export interface DefaultTheme {
     bp: {
@@ -13,12 +12,19 @@ declare module 'styled-components' {
       red: string;
       yellow: string;
       gradient: string;
+      white: string;
       black: string;
       divider: string;
-      font: string;
+      font: {
+        default: string;
+        link: string;
+        linkHover: string;
+      };
       bg: {
         body?: string;
+        header?: string;
         footer?: string;
+        paper?: string;
       };
     };
   }

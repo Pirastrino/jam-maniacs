@@ -1,13 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Switch } from './Switch';
 import { Divider } from '../Divider';
+
+type Props = {
+  toggleTheme: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
 const Wrapper = styled.div`
   height: 50px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 2rem;
-  background-color: ${props => props.theme.colors.red};
+  background-color: ${props => props.theme.colors.bg.header};
 
   @media (min-width: ${props => props.theme.bp.md}) {
     height: 60px;
@@ -23,11 +29,12 @@ const Logo = styled.div`
   }
 `;
 
-export const HeaderBar = () => {
+export const HeaderBar = ({ toggleTheme }: Props) => {
   return (
     <div>
       <Wrapper>
         <Logo>MANIACS BRNO</Logo>
+        <Switch toggleTheme={toggleTheme} />
       </Wrapper>
       <Divider rainbow />
     </div>
