@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   display: flex;
 `;
 
-const Label = styled.label`
+const Controller = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -37,12 +37,11 @@ const Input = styled.input`
   width: 34px;
   height: 21px;
   cursor: pointer;
-  &:checked + ${Label} {
+  &:checked + ${Controller} {
     background: ${props => props.theme.colors.bg.paper};
     &::after {
       content: '';
       display: block;
-      /* background: ${props => props.theme.colors.bg.paper}; */
       border-radius: 50%;
       width: 15px;
       height: 15px;
@@ -52,6 +51,17 @@ const Input = styled.input`
   }
 `;
 
+const Label = styled.label`
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+`;
+
 export const Switch = ({ toggleTheme }: Props) => {
   const onChangeToggle = (e: React.ChangeEvent<HTMLInputElement>) =>
     toggleTheme(e.target.checked);
@@ -59,7 +69,8 @@ export const Switch = ({ toggleTheme }: Props) => {
   return (
     <Wrapper>
       <Input id="theme-switcher" type="checkbox" onChange={onChangeToggle} />
-      <Label htmlFor="theme-switcher" />
+      <Controller />
+      <Label htmlFor="theme-switcher">Theme switcher</Label>
     </Wrapper>
   );
 };
