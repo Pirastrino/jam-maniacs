@@ -25,7 +25,11 @@ export const Footer = () => {
       <Divider rainbow width={2} />
       <StyledDiv>
         {`With ❤️ and ☕️ by`}&nbsp;
-        <StyledLink href="https://github.com/Pirastrino" target="_blank">
+        <StyledLink
+          href="https://github.com/Pirastrino"
+          target="_blank"
+          rel="noopener"
+        >
           @pirastrino
         </StyledLink>
         {`｜${year}`}
