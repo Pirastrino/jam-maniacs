@@ -7,6 +7,7 @@ export const lightTheme: DefaultTheme = {
     ...baseTheme.colors,
     ...{
       font: {
+        title: '#EF5350',
         default: '#2C2C2C',
         link: '#2C2C2C',
         linkHover: '#EF5350',
@@ -16,6 +17,11 @@ export const lightTheme: DefaultTheme = {
         header: '#EF5350',
         footer: '#E0E0E0',
         paper: '#FAFAFA',
+      },
+      button: {
+        text: '#2C2C2C',
+        default: '#FFB300',
+        hover: '#EF5350',
       },
     },
   },

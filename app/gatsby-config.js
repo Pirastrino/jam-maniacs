@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: ['Rubik:400,700'],
+        fonts: ['Rubik:400,500,700'],
         display: 'swap',
       },
     },

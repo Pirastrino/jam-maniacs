@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Layout } from '../components/Layout';
 import { lightTheme, darkTheme } from '../themes';
+import { Hero } from '../components/Hero';
 
 const App = () => {
   const [useDarkTheme, toggleTheme] = useState(false);
@@ -9,7 +10,7 @@ const App = () => {
   return (
     <ThemeProvider theme={useDarkTheme ? darkTheme : lightTheme}>
       <Layout toggleTheme={toggleTheme}>
-        <h1 style={{ textAlign: 'center' }}>Welcome clashers!</h1>
+        <Hero />
       </Layout>
     </ThemeProvider>
   );

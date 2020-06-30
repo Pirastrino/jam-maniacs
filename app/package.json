@@ -14,7 +14,8 @@
     "modern-normalize": "^0.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "use-cloudinary": "^2.2.5"
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.0"

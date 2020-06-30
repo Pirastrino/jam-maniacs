@@ -16,15 +16,21 @@ declare module 'styled-components' {
       black: string;
       divider: string;
       font: {
+        title: string;
         default: string;
         link: string;
         linkHover: string;
       };
       bg: {
-        body?: string;
-        header?: string;
-        footer?: string;
-        paper?: string;
+        body: string;
+        header: string;
+        footer: string;
+        paper: string;
+      };
+      button: {
+        text: string;
+        default: string;
+        hover: string;
       };
     };
   }

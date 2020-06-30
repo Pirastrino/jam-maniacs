@@ -7,6 +7,7 @@ export const darkTheme: DefaultTheme = {
     ...baseTheme.colors,
     ...{
       font: {
+        title: '#FFB300',
         default: '#E9E9E9',
         link: '#E9E9E9',
         linkHover: '#FFCA28',
@@ -16,6 +17,11 @@ export const darkTheme: DefaultTheme = {
         header: '#2C2C2C',
         footer: '#2C2C2C',
         paper: '#787878',
+      },
+      button: {
+        text: '#2C2C2C',
+        default: '#FFB300',
+        hover: '#EF5350',
       },
     },
   },

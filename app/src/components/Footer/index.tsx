@@ -12,7 +12,6 @@ const StyledDiv = styled.div`
 
 const StyledLink = styled.a`
   color: ${props => props.theme.colors.font.link};
-  text-decoration: none;
   &:hover {
     color: ${props => props.theme.colors.font.linkHover};
   }
