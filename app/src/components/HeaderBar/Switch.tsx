@@ -62,7 +62,7 @@ const Label = styled.label`
   position: absolute;
 `;
 
-export const Switch = ({ toggleTheme }: Props) => {
+const Switch: React.FC<Props> = ({ toggleTheme }) => {
   const onChangeToggle = (e: React.ChangeEvent<HTMLInputElement>) =>
     toggleTheme(e.target.checked);
 
@@ -74,3 +74,5 @@ export const Switch = ({ toggleTheme }: Props) => {
     </Wrapper>
   );
 };
+
+export { Switch };

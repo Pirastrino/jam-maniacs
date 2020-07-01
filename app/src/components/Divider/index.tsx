@@ -14,9 +14,11 @@ const StyledDiv = styled.div<Props>`
   width: ${props => (props.vertical && `${props.width}px`) || '100%'};
 `;
 
-export const Divider = (props: Props) => {
+const Divider = (props: Props) => {
   return <StyledDiv {...props} />;
 };
 
 const defaultProps = { vertical: false, width: 1 };
 Divider.defaultProps = defaultProps;
+
+export { Divider };

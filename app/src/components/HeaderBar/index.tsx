@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link as GatsbyLink } from 'gatsby';
 import { Switch } from './Switch';
 import { Divider } from '../Divider';
 
 type Props = {
-  toggleTheme: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleTheme?: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const Wrapper = styled.div`
@@ -20,23 +21,29 @@ const Wrapper = styled.div`
   }
 `;
 
-const Logo = styled.div`
+const Link = styled(GatsbyLink)`
   font-weight: 700;
   font-size: 1.2rem;
+
+  :hover {
+    color: ${props => props.theme.colors.yellow};
+  }
 
   @media (min-width: ${props => props.theme.bp.md}) {
     font-size: 1.5rem;
   }
 `;
 
-export const HeaderBar = ({ toggleTheme }: Props) => {
+const HeaderBar: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <div>
       <Wrapper>
-        <Logo>MANIACS BRNO</Logo>
-        <Switch toggleTheme={toggleTheme} />
+        <Link to="/">MANIACS BRNO</Link>
+        {toggleTheme && <Switch toggleTheme={toggleTheme} />}
       </Wrapper>
       <Divider rainbow />
     </div>
   );
 };
+
+export { HeaderBar };

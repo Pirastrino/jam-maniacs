@@ -17,7 +17,7 @@ const StyledLink = styled.a`
   }
 `;
 
-export const Footer = () => {
+const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <div>
@@ -36,3 +36,5 @@ export const Footer = () => {
     </div>
   );
 };
+
+export { Footer };

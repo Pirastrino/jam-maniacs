@@ -5,14 +5,13 @@ type Props = {
   link: string;
 };
 
-const StyledButton = styled.div`
-  background-color: ${props => props.theme.colors.button.default};
-
+const StyledButton = styled.button`
   display: flex;
   align-items: center;
+  background-color: ${props => props.theme.colors.button.default};
   justify-content: center;
-  padding: 0.14rem 2rem;
-  min-width: 140px;
+  padding: 0.5rem 2rem;
+  width: fit-content;
 
   a {
     color: ${props => props.theme.colors.button.text};
@@ -24,10 +23,12 @@ const StyledButton = styled.div`
   }
 `;
 
-export const Button = ({ children, link }: PropsWithChildren<Props>) => {
+const Button = ({ children, link }: PropsWithChildren<Props>) => {
   return (
     <StyledButton>
       <a href={link}>{children}</a>
     </StyledButton>
   );
 };
+
+export { Button };
