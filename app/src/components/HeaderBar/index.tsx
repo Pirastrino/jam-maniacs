@@ -4,10 +4,6 @@ import { Link as GatsbyLink } from 'gatsby';
 import { Switch } from './Switch';
 import { Divider } from '../Divider';
 
-type Props = {
-  toggleTheme?: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
 const Wrapper = styled.div`
   height: 50px;
   display: flex;
@@ -34,12 +30,12 @@ const Link = styled(GatsbyLink)`
   }
 `;
 
-const HeaderBar: React.FC<Props> = ({ toggleTheme }) => {
+const HeaderBar = () => {
   return (
     <div>
       <Wrapper>
         <Link to="/">MANIACS BRNO</Link>
-        {toggleTheme && <Switch toggleTheme={toggleTheme} />}
+        <Switch />
       </Wrapper>
       <Divider rainbow />
     </div>

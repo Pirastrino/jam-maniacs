@@ -5,21 +5,27 @@
   "author": "Martin Began <martin.began@kiwi.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "gatsby develop"
+    "build:gatsby": "tsc --project tsconfig.gatsby.json",
+    "prebuild": "yarn build:gatsby",
+    "build": "netlify build",
+    "build:prod": "netlify build --prod",
+    "dev": "netlify develop"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
     "gatsby": "^2.23.11",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-styled-components": "^3.3.6",
     "gatsby-plugin-typescript": "^2.4.8",
+    "gatsby-plugin-use-dark-mode": "^1.1.2",
     "modern-normalize": "^0.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "styled-components": "^5.1.1",
-    "use-cloudinary": "^2.2.5"
+    "typescript": "^3.9.6",
+    "use-cloudinary": "^2.2.5",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.41",

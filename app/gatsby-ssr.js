@@ -1,6 +1,8 @@
-// import React from 'react';
-// import { ThemeProvider } from './src/context/ThemeContext';
+import React from 'react';
+import { ThemeProvider } from './src/components/ThemeProvider.tsx';
 
-// export const wrapRootElement = ({ element }) => (
-//   <ThemeProvider>{element}</ThemeProvider>
-// );
+const wrapRootElement = ({ element }) => (
+  <ThemeProvider>{element}</ThemeProvider>
+);
+
+export { wrapRootElement };

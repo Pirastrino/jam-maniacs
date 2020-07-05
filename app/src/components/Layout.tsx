@@ -5,11 +5,6 @@ import { HeaderBar } from './HeaderBar';
 import { Footer } from './Footer';
 import 'modern-normalize';
 
-type Props = {
-  children: any;
-  toggleTheme?: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -17,11 +12,11 @@ const Wrapper = styled.div`
   min-height: 100vh;
 `;
 
-const Layout: React.FC<Props> = ({ children, toggleTheme }) => {
+const Layout: React.FC = ({ children }) => {
   return (
     <Wrapper>
       <GlobalStyles />
-      <HeaderBar toggleTheme={toggleTheme} />
+      <HeaderBar />
       {children}
       <Footer />
     </Wrapper>
