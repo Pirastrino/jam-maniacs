@@ -1,9 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-
-type Props = {
-  toggleTheme: React.Dispatch<React.SetStateAction<boolean>>;
-};
+import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
 
 const Wrapper = styled.div`
   position: relative;
@@ -62,13 +59,19 @@ const Label = styled.label`
   position: absolute;
 `;
 
-const Switch: React.FC<Props> = ({ toggleTheme }) => {
+const Switch = () => {
+  const { isDark, toggleDark } = useContext(ThemeManagerContext);
   const onChangeToggle = (e: React.ChangeEvent<HTMLInputElement>) =>
-    toggleTheme(e.target.checked);
+    toggleDark(e.target.checked);
 
   return (
     <Wrapper>
-      <Input id="theme-switcher" type="checkbox" onChange={onChangeToggle} />
+      <Input
+        id="theme-switcher"
+        type="checkbox"
+        checked={isDark}
+        onChange={onChangeToggle}
+      />
       <Controller />
       <Label htmlFor="theme-switcher">Theme switcher</Label>
     </Wrapper>

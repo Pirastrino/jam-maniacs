@@ -24,9 +24,7 @@ const SEO: React.FC<SEOProps> = props => {
         siteMetadata {
           title
           description
-          author {
-            name
-          }
+          author
           url
           keywords
           image
