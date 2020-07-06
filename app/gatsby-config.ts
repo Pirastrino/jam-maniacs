@@ -8,10 +8,9 @@ export const siteMetadata = {
 };
 
 export const plugins = [
-  'gatsby-plugin-styled-components',
   'gatsby-plugin-typescript',
   'gatsby-plugin-react-helmet',
-  'gatsby-plugin-use-dark-mode',
+  'gatsby-plugin-styled-components',
   {
     resolve: 'gatsby-plugin-google-fonts',
     options: {

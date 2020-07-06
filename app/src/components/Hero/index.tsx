@@ -15,7 +15,7 @@ const Wrapper = styled.div`
     margin: auto;
   }
 
-  @media (min-width: ${props => props.theme.bp.md}) {
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
     display: grid;
     grid-template-columns: 1fr 50px 1fr;
     grid-template-rows: 1fr;
@@ -41,7 +41,7 @@ const StyledDiv = styled.div`
   align-items: center;
   text-align: center;
 
-  @media (min-width: ${props => props.theme.bp.md}) {
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
     grid-column-start: 1;
     grid-column-end: 3;
     text-align: left;
@@ -53,7 +53,7 @@ const StyledDiv = styled.div`
 const ImagePlaceholder = styled.div`
   display: none;
 
-  @media (min-width: ${props => props.theme.bp.md}) {
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
     display: block;
     margin-left: -50px;
   }

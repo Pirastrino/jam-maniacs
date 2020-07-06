@@ -1,8 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import useDarkMode from 'use-dark-mode';
+import {
+  useGlobalState,
+  useGlobalDispatch,
+  ActionTypes,
+} from '../GlobalContextProvider';
 
-const Wrapper = styled.div`
+const Switch = styled.div`
   position: relative;
   display: flex;
 `;
@@ -14,7 +18,7 @@ const Controller = styled.div`
   width: 35px;
   height: 21px;
   border-radius: 15px;
-  background: ${props => props.theme.colors.black};
+  background: ${props => props.theme.colors.bgPaper};
   &::after {
     content: '';
     display: block;
@@ -23,7 +27,7 @@ const Controller = styled.div`
     height: 15px;
     margin: 3px;
     background: ${props => props.theme.colors.yellow};
-    transition: 0.2s;
+    transition: 0.4s;
   }
 `;
 
@@ -35,7 +39,7 @@ const Input = styled.input`
   height: 21px;
   cursor: pointer;
   &:checked + ${Controller} {
-    background: ${props => props.theme.colors.bg.paper};
+    background: ${props => props.theme.colors.bgPaper};
     &::after {
       content: '';
       display: block;
@@ -43,7 +47,7 @@ const Input = styled.input`
       width: 15px;
       height: 15px;
       margin-left: 17px;
-      transition: 0.2s;
+      transition: 0.4s;
     }
   }
 `;
@@ -59,21 +63,22 @@ const Label = styled.label`
   position: absolute;
 `;
 
-const Switch = () => {
-  const { value, toggle } = useDarkMode();
+const ThemeSwitch = () => {
+  const state = useGlobalState();
+  const dispatch = useGlobalDispatch();
 
   return (
-    <Wrapper>
+    <Switch>
       <Input
         id="theme-switcher"
         type="checkbox"
-        checked={value}
-        onChange={toggle}
+        defaultChecked={state.darkMode}
+        onClick={() => dispatch({ type: ActionTypes.TOGGLE_THEME })}
       />
       <Controller />
       <Label htmlFor="theme-switcher">Theme switcher</Label>
-    </Wrapper>
+    </Switch>
   );
 };
 
-export { Switch };
+export { ThemeSwitch };

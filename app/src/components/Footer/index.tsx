@@ -7,20 +7,17 @@ const StyledDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${props => props.theme.colors.bg.footer};
+  background: ${props => props.theme.colors.bgFooter};
 `;
 
 const StyledLink = styled.a`
-  color: ${props => props.theme.colors.font.link};
-  &:hover {
-    color: ${props => props.theme.colors.font.linkHover};
-  }
+  color: ${props => props.theme.colors.textLink};
 `;
 
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <div>
+    <footer>
       <Divider rainbow width={2} />
       <StyledDiv>
         {`With ❤️ and ☕️ by`}&nbsp;
@@ -33,7 +30,7 @@ const Footer = () => {
         </StyledLink>
         {`｜${year}`}
       </StyledDiv>
-    </div>
+    </footer>
   );
 };
 

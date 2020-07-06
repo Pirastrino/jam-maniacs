@@ -8,18 +8,13 @@ type Props = {
 const StyledButton = styled.button`
   display: flex;
   align-items: center;
-  background-color: ${props => props.theme.colors.button.default};
+  background-color: ${props => props.theme.colors.bgButton};
   justify-content: center;
   padding: 0.5rem 2rem;
   width: fit-content;
 
-  a {
-    color: ${props => props.theme.colors.button.text};
-    font-weight: 500;
-  }
-
   :hover {
-    background-color: ${props => props.theme.colors.button.hover};
+    background-color: ${props => props.theme.colors.bgButtonHover};
   }
 `;
 

@@ -15,5 +15,5 @@
     "target": "esNext",
     "outDir": ".gatsby"
   },
-  "include": ["./src/gatsby-config.ts"]
+  "include": ["./gatsby-config.ts", "./gatsby-browser.tsx", "./gatsby-ssr.tsx"]
 }

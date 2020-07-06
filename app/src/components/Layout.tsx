@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { GlobalStyles } from './GlobalStyles';
 import { HeaderBar } from './HeaderBar';
 import { Footer } from './Footer';
-import 'modern-normalize';
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,9 +13,8 @@ const Wrapper = styled.div`
 const Layout: React.FC = ({ children }) => {
   return (
     <Wrapper>
-      <GlobalStyles />
       <HeaderBar />
-      {children}
+      <main>{children}</main>
       <Footer />
     </Wrapper>
   );
