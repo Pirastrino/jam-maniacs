@@ -12,10 +12,22 @@ export const plugins = [
   'gatsby-plugin-react-helmet',
   'gatsby-plugin-styled-components',
   {
-    resolve: 'gatsby-plugin-google-fonts',
+    resolve: `gatsby-plugin-webfonts`,
     options: {
-      fonts: ['Rubik:400,500,700'],
-      display: 'swap',
+      fonts: {
+        google: [
+          {
+            family: 'Rubik',
+            variants: ['400', '500', '700'],
+            subsets: ['latin-ext'],
+            fontDisplay: 'swap',
+            strategy: 'selfHosted',
+          },
+        ],
+      },
+      formats: ['woff2', 'woff'],
+      useMinify: true,
+      usePreload: true,
     },
   },
 ];
