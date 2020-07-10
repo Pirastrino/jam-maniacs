@@ -2,13 +2,26 @@ import React from 'react';
 import styled from 'styled-components';
 import { useGlobalState } from '../GlobalContextProvider';
 import { Accordion, AccordionDetail, AccordionSummary } from '../Accordion';
-import { rules } from '../../data/rules';
 
-type RuleProps = {
+type RuleStyleProps = {
   darkMode: boolean;
 };
 
-const StyledSummary = styled(AccordionSummary)<RuleProps>`
+type ClanRule = {
+  id: string;
+  title: string;
+  description: string;
+};
+
+type ClanRulesData = {
+  data: {
+    allClanRule: {
+      rules: [ClanRule];
+    };
+  };
+};
+
+export const StyledSummary = styled(AccordionSummary)<RuleStyleProps>`
   color: ${props =>
     props.darkMode
       ? props.theme.colors.yellow
@@ -23,15 +36,17 @@ const StyledDetail = styled(AccordionDetail)`
   font-size: 0.9rem;
 `;
 
-const Rule = styled.div<RuleProps>`
+const Rule = styled.div<RuleStyleProps>`
   box-shadow: ${props => props.theme.colors.shadow};
   border: ${props =>
     props.darkMode ? 0 : `1px solid ${props.theme.colors.bgDivider}`};
   margin-bottom: 1rem;
 `;
 
-const Rules = () => {
+const ClanRules = ({ data }: ClanRulesData) => {
   const { darkMode } = useGlobalState();
+
+  const { rules } = data.allClanRule;
 
   return (
     <Accordion>
@@ -46,4 +61,4 @@ const Rules = () => {
   );
 };
 
-export { Rules };
+export { ClanRules };

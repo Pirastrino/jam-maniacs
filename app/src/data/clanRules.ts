@@ -1,4 +1,4 @@
-const rules = [
+const clanRules = [
   {
     id: 1,
     title: 'Slušné chování',
@@ -61,4 +61,4 @@ const rules = [
   },
 ];
 
-export { rules };
+export { clanRules };

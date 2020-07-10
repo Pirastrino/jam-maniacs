@@ -1,7 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import { graphql, useStaticQuery } from 'gatsby';
 import { SEO } from '../components';
-import { Rules } from '../components/Rules';
+import { ClanRules } from '../components/ClanRules';
+
+const allRulesQuery = graphql`
+  {
+    allClanRule {
+      rules: nodes {
+        id
+        description
+        title
+      }
+    }
+  }
+`;
 
 const Wrapper = styled.div`
   max-width: 900px;
@@ -19,12 +32,14 @@ const Title = styled.h1`
 `;
 
 const RulesPage = () => {
+  const data = useStaticQuery(allRulesQuery);
+
   return (
     <>
       <SEO title="Maniacs Brno | Pravidla" />
       <Wrapper>
         <Title>Pravidla</Title>
-        <Rules />
+        <ClanRules data={data} />
       </Wrapper>
     </>
   );
