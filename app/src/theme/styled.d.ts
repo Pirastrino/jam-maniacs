@@ -9,18 +9,21 @@ declare module 'styled-components' {
       xl: string;
     };
     colors: {
-      red: string;
+      red200: string;
+      red400: string;
       yellow: string;
       gradient: string;
-      divider: string;
+      shadow: string;
       bgBody: string;
       bgButton: string;
       bgButtonHover: string;
+      bgDivider: string;
       bgFooter: string;
       bgHeader: string;
       bgPaperLight: string;
       bgPaper: string;
       bgPaperDark: string;
+      bgSwitch: string;
       textDefault: string;
       textInverse: string;
       textLink: string;

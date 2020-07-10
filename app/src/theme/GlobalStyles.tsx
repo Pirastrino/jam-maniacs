@@ -2,10 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   :root {
-      --red: #EF5350;
-      --yellow: #FFB300;
-      --gradient: linear-gradient(90deg, #EF5350 0%, #FFB300 100%);
-      --divider: #595959;
+      --red200: #ef9a9a;
+      --red400: #ef5350;
+      --yellow: #ffc107;
+      --gradient: linear-gradient(90deg, #eF5350 0%, #ffc107 100%);
+      --shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px -2px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px;
     }
 
   body {
@@ -14,35 +15,39 @@ const GlobalStyles = createGlobalStyle`
     font-family: Rubik,  sans-serif;
 
     &.dark {
-      --bgBody: #35363A;
-      --bgButton: #FFB300;
-      --bgButtonHover: #EF5350;
-      --bgFooter: #2C2C2C;
-      --bgHeader: #2C2C2C;
-      --bgPaperLight: #787878;
-      --bgPaper: #787878;
-      --bgPaperDark: #787878;
-      --textDefault: #E9E9E9;
-      --textInverse: #2C2C2C;
-      --textLink: #E9E9E9;
-      --textLinkHover: #FFB300;
-      --textTitle: #FFB300;
+      --bgBody: #222222;
+      --bgButton: #ffc107;
+      --bgButtonHover: #ef5350;
+      --bgDivider: #616161;
+      --bgFooter: #333333;
+      --bgHeader: #333333;
+      --bgPaperLight: #515151;
+      --bgPaper: #424242;
+      --bgPaperDark: #333333;
+      --bgSwitch: #757575;
+      --textDefault: #e9e9e9;
+      --textInverse: #2c2c2c;
+      --textLink: #e9e9e9;
+      --textLinkHover: #ffb300;
+      --textTitle: #ffb300;
     }
 
     &.light {
-      --bgBody: #FAFAFA;
-      --bgButton: #FFB300;
-      --bgButtonHover: #EF5350;
-      --bgFooter: #E0E0E0;
-      --bgHeader: #EF5350;
-      --bgPaperLight: #FAFAFA;
-      --bgPaper: #FAFAFA;
-      --bgPaperDark: #FAFAFA;
-      --textDefault: #2C2C2C;
-      --textInverse: #E9E9E9;
-      --textLink: #2C2C2C;
-      --textLinkHover: #FFB300;
-      --textTitle: #EF5350;
+      --bgBody: #ffffff;
+      --bgButton: #ffc107;
+      --bgButtonHover: #ef5350;
+      --bgDivider: #e0e0e0;
+      --bgFooter: #e0e0e0;
+      --bgHeader: #ef5350;
+      --bgPaperLight: #ffffff;
+      --bgPaper: #eeeeee;
+      --bgPaperDark: #e0e0e0;
+      --bgSwitch: #333333;
+      --textDefault: #2c2c2c;
+      --textInverse: #e9e9e9;
+      --textLink: #2c2c2c;
+      --textLinkHover: #ef5350;
+      --textTitle: #eF5350;
     }
 
     h1,

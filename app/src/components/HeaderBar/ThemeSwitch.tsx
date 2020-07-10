@@ -18,7 +18,7 @@ const Controller = styled.div`
   width: 35px;
   height: 21px;
   border-radius: 15px;
-  background: ${props => props.theme.colors.bgPaper};
+  background: ${props => props.theme.colors.bgSwitch};
   &::after {
     content: '';
     display: block;
@@ -39,7 +39,7 @@ const Input = styled.input`
   height: 21px;
   cursor: pointer;
   &:checked + ${Controller} {
-    background: ${props => props.theme.colors.bgPaper};
+    background: ${props => props.theme.colors.bgSwitch};
     &::after {
       content: '';
       display: block;

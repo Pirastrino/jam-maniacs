@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
+
 // @ts-ignore
 import { useImage } from 'use-cloudinary';
+
 import { Button } from '../Button';
 
 const Wrapper = styled.div`
@@ -10,10 +12,6 @@ const Wrapper = styled.div`
   max-width: 400px;
   padding: 0 2rem;
   margin: auto;
-
-  & button {
-    margin: auto;
-  }
 
   @media (min-width: ${props => props.theme.breakpoints.md}) {
     display: grid;
@@ -46,7 +44,7 @@ const StyledDiv = styled.div`
     grid-column-end: 3;
     text-align: left;
     align-items: flex-start;
-    padding-top: 2rem;
+    padding-top: 3rem;
   }
 `;
 
@@ -81,10 +79,10 @@ const Hero = () => {
             záchodě hrají Clash of Clans. Chceš-li se naučit tomuto
             multitaskingu, jseš na správném místě!
           </p>
-          <Button link="/">Pravidla</Button>
+          <Button to="/rules">Pravidla</Button>
         </StyledDiv>
         <ImagePlaceholder>
-          {data && <img src={data} alt="king" loading="lazy" />}
+          {data && <img src={data} alt="king" loading="lazy" width={400} />}
         </ImagePlaceholder>
       </Wrapper>
     </>

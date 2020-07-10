@@ -1,16 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
+import { Navigation } from './Navigation';
 import { ThemeSwitch } from './ThemeSwitch';
 import { Divider } from '../Divider';
 
 const Wrapper = styled.div`
-  height: 50px;
-  display: flex;
   align-items: center;
+  background-color: ${props => props.theme.colors.bgHeader};
+  box-shadow: ${props => props.theme.colors.shadow};
+  display: flex;
+  height: 50px;
   justify-content: space-between;
   padding: 0 2rem;
-  background-color: ${props => props.theme.colors.bgHeader};
+
+  a {
+    &:hover {
+      color: ${props => props.theme.colors.yellow};
+    }
+  }
 
   @media (min-width: ${props => props.theme.breakpoints.md}) {
     height: 60px;
@@ -19,7 +27,10 @@ const Wrapper = styled.div`
 
 const Home = styled(GatsbyLink)`
   font-weight: 700;
-  font-size: 1.2rem;
+
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
+    font-size: 1.2rem;
+  }
 `;
 
 const HeaderBar = () => {
@@ -27,6 +38,7 @@ const HeaderBar = () => {
     <header>
       <Wrapper>
         <Home to="/">MANIACS BRNO</Home>
+        <Navigation />
         <ThemeSwitch />
       </Wrapper>
       <Divider rainbow />
