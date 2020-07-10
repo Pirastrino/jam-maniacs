@@ -17,19 +17,15 @@ const StyledButton = styled(UnstyledButton)<StyleProps>`
   box-shadow: ${props => props.theme.colors.shadow};
   padding: 0.5rem 3rem;
   font-weight: 500;
-  transition: background-color ease-out 0.3s;
+  transition: background-color ease-out 0.2s;
 
   &:hover {
     background-color: ${props => props.theme.colors.bgButtonHover};
-    transition: background-color ease-out 0.2s;
-  }
-`;
+    transition: background-color color ease-out 0.2s;
 
-const StyledLink = styled(Link)`
-  color: ${props => props.theme.colors.textButton};
-
-  &:hover {
-    color: ${props => props.theme.colors.textButton};
+    & a {
+      color: ${props => props.theme.colors.textDefault};
+    }
   }
 `;
 
@@ -38,7 +34,7 @@ const Button = ({ children, to }: PropsWithChildren<Props>) => {
 
   return (
     <StyledButton fullWidth={false} darkMode={darkMode}>
-      <StyledLink to={to}>{children}</StyledLink>
+      <Link to={to}>{children}</Link>
     </StyledButton>
   );
 };

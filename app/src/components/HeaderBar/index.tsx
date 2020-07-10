@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
+import { useGlobalState } from '../GlobalContextProvider';
 import { Navigation } from './Navigation';
 import { ThemeSwitch } from './ThemeSwitch';
 import { Divider } from '../Divider';
@@ -13,12 +14,6 @@ const Wrapper = styled.div`
   height: 50px;
   justify-content: space-between;
   padding: 0 2rem;
-
-  a {
-    &:hover {
-      color: ${props => props.theme.colors.yellow};
-    }
-  }
 
   @media (min-width: ${props => props.theme.breakpoints.md}) {
     height: 60px;
@@ -34,6 +29,8 @@ const Home = styled(GatsbyLink)`
 `;
 
 const HeaderBar = () => {
+  const { darkMode } = useGlobalState();
+
   return (
     <header>
       <Wrapper>
@@ -41,7 +38,7 @@ const HeaderBar = () => {
         <Navigation />
         <ThemeSwitch />
       </Wrapper>
-      <Divider rainbow />
+      {darkMode && <Divider rainbow />}
     </header>
   );
 };
