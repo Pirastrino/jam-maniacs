@@ -75,8 +75,8 @@ const Hero = () => {
         <StyledDiv>
           <h1>Vítej bojovníku!</h1>
           <p>
-            Jsme parta Maníků z Brna, různé váhové kateogie, kteří v šalině a na
-            záchodě hrají Clash of Clans. Chceš-li se naučit tomuto
+            Jsme parta Maníků z Brna, různé váhové kategorie, kteří v šalině a
+            na záchodě hrají Clash of Clans. Chceš-li se naučit tomuto
             multitaskingu, jseš na správném místě!
           </p>
           <Button to="/rules">Pravidla</Button>

@@ -23,6 +23,7 @@ const theme: DefaultTheme = {
     bgPaper: 'var(--bgPaper)',
     bgPaperDark: 'var(--bgPaperDark)',
     bgSwitch: 'var(--bgSwitch)',
+    textButton: 'var(--textButton)',
     textDefault: 'var(--textDefault)',
     textInverse: 'var(--textInverse)',
     textLink: 'var(--textLink)',

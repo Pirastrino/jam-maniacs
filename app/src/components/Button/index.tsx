@@ -23,13 +23,13 @@ const StyledButton = styled(UnstyledButton)<StyleProps>`
     background-color: ${props => props.theme.colors.bgButtonHover};
     transition: background-color ease-out 0.2s;
   }
+`;
 
-  a,
-  a:hover {
-    color: ${props =>
-      props.darkMode
-        ? props.theme.colors.textInverse
-        : props.theme.colors.textDefault};
+const StyledLink = styled(Link)`
+  color: ${props => props.theme.colors.textButton};
+
+  &:hover {
+    color: ${props => props.theme.colors.textButton};
   }
 `;
 
@@ -38,7 +38,7 @@ const Button = ({ children, to }: PropsWithChildren<Props>) => {
 
   return (
     <StyledButton fullWidth={false} darkMode={darkMode}>
-      <Link to={to}>{children}</Link>
+      <StyledLink to={to}>{children}</StyledLink>
     </StyledButton>
   );
 };

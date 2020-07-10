@@ -24,6 +24,7 @@ declare module 'styled-components' {
       bgPaper: string;
       bgPaperDark: string;
       bgSwitch: string;
+      textButton: string;
       textDefault: string;
       textInverse: string;
       textLink: string;

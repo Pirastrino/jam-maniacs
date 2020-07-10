@@ -25,6 +25,7 @@ const GlobalStyles = createGlobalStyle`
       --bgPaper: #424242;
       --bgPaperDark: #333333;
       --bgSwitch: #757575;
+      --textButton: #2c2c2c;
       --textDefault: #e9e9e9;
       --textInverse: #2c2c2c;
       --textLink: #e9e9e9;
@@ -43,6 +44,7 @@ const GlobalStyles = createGlobalStyle`
       --bgPaper: #eeeeee;
       --bgPaperDark: #e0e0e0;
       --bgSwitch: #333333;
+      --textButton: #2c2c2c;
       --textDefault: #2c2c2c;
       --textInverse: #e9e9e9;
       --textLink: #2c2c2c;
