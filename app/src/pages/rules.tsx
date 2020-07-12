@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   text-align: center;
   padding: 3rem 1rem 0 1rem;
 
-  @media (min-width: ${props => props.theme.breakpoints.md}) {
+  @media (min-width: ${props => props.theme.respondUp.md}) {
     padding: 5rem 1rem;
   }
 `;

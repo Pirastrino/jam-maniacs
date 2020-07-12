@@ -3,7 +3,8 @@
   "compilerOptions": {
     "target": "es5",
     "jsx": "react",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"]
   },
   "include": ["src"]
 }

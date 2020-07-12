@@ -3,6 +3,12 @@ import 'styled-components';
 declare module 'styled-components' {
   export interface DefaultTheme {
     breakpoints: {
+      sm: number;
+      md: number;
+      lg: number;
+      xl: number;
+    };
+    respondUp: {
       sm: string;
       md: string;
       lg: string;

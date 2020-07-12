@@ -3,7 +3,8 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
-    "outDir": ".functions"
+    "outDir": ".functions",
+    "types": []
   },
   "include": ["src/functions/**/*"]
 }

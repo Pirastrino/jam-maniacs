@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   padding: 0 2rem;
 
-  @media (min-width: ${props => props.theme.breakpoints.md}) {
+  @media (min-width: ${props => props.theme.respondUp.md}) {
     height: 60px;
   }
 `;
@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 const Home = styled(GatsbyLink)`
   font-weight: 700;
 
-  @media (min-width: ${props => props.theme.breakpoints.md}) {
+  @media (min-width: ${props => props.theme.respondUp.md}) {
     font-size: 1.2rem;
   }
 `;

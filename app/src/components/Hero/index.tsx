@@ -1,9 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-
-// @ts-ignore
-import { useImage } from 'use-cloudinary';
-
+import { LazyImage } from '../LazyImage';
 import { Button } from '../Button';
 
 const Wrapper = styled.div`
@@ -13,11 +10,11 @@ const Wrapper = styled.div`
   padding: 0 2rem;
   margin: auto;
 
-  @media (min-width: ${props => props.theme.breakpoints.md}) {
+  @media (min-width: ${props => props.theme.respondUp.md}) {
     display: grid;
     grid-template-columns: 1fr 50px 1fr;
     grid-template-rows: 1fr;
-    min-height: 450px;
+    min-height: 420px;
     max-width: 900px;
     padding: 0 2rem;
     margin: auto;
@@ -39,7 +36,7 @@ const StyledDiv = styled.div`
   align-items: center;
   text-align: center;
 
-  @media (min-width: ${props => props.theme.breakpoints.md}) {
+  @media (min-width: ${props => props.theme.respondUp.md}) {
     grid-column-start: 1;
     grid-column-end: 3;
     text-align: left;
@@ -51,24 +48,12 @@ const StyledDiv = styled.div`
 const ImagePlaceholder = styled.div`
   display: none;
 
-  @media (min-width: ${props => props.theme.breakpoints.md}) {
+  @media (min-width: ${props => props.theme.respondUp.md}) {
     display: block;
-    margin-left: -50px;
   }
 `;
 
 const Hero = () => {
-  const { getImage, data } = useImage({
-    cloud_name: 'corpexlab',
-  });
-
-  useEffect(() => {
-    getImage({
-      public_id: 'v1593468435/maniacs/hero-king',
-      transform_options: {},
-    });
-  }, []);
-
   return (
     <>
       <Wrapper>
@@ -82,7 +67,7 @@ const Hero = () => {
           <Button to="/rules">Pravidla</Button>
         </StyledDiv>
         <ImagePlaceholder>
-          {data && <img src={data} alt="king" loading="lazy" width={400} />}
+          <LazyImage name="hero-king" />
         </ImagePlaceholder>
       </Wrapper>
     </>

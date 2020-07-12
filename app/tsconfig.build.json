@@ -12,7 +12,8 @@
     "skipLibCheck": true,
     "strict": false,
     "target": "esNext",
-    "outDir": "./"
+    "outDir": "./",
+    "types": []
   },
   "include": [".gatsby/**/*.ts", ".gatsby/**/*.tsx"]
 }
