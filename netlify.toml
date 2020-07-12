@@ -1,2 +1,9 @@
 [build]
-  base="app/"
+base = "app/"
+functions = ".functions"
+
+[dev]
+command = 'yarn workspace app dev'
+framework = "#custom"
+publish = 'app/public'
+targetPort = 8000

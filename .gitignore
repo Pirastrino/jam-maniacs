@@ -21,5 +21,6 @@ yarn-error.log*
 # Local Netlify folder
 .netlify
 
-# Compiled Gatsby config
-.gatsby/
+# Compiled Files
+.gatsby
+.functions

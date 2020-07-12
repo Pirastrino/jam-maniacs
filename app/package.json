@@ -5,11 +5,12 @@
   "author": "Martin Began <martin.began@kiwi.com>",
   "license": "MIT",
   "scripts": {
-    "build:gatsby": "tsc --project tsconfig.gatsby.json",
-    "prebuild": "yarn build:gatsby",
-    "build": "netlify build",
-    "build:prod": "netlify build --prod",
-    "dev": "netlify develop"
+    "build": "yarn build:functions && netlify build",
+    "build:functions": "rm -rf .functions && tsc --p tsconfig.dev.json",
+    "clean": "gatsby clean",
+    "deploy": "yarn clean && yarn build && netlify deploy",
+    "deploy:prod": "yarn clean && yarn build && netlify deploy --prod",
+    "dev": "gatsby develop"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",

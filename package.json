@@ -3,5 +3,10 @@
   "workspaces": [
     "app",
     "themes/*"
-  ]
+  ],
+  "scripts": {
+    "deploy": "yarn workspace app deploy",
+    "deploy:prod": "yarn workspace app deploy:prod",
+    "dev": "yarn build:functions && netlify dev"
+  }
 }

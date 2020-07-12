@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "outDir": ".functions"
+  },
+  "include": ["src/functions/**/*"]
+}
