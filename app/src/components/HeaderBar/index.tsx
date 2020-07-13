@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
-import { useGlobalState } from '../GlobalContextProvider';
 import { Navigation } from './Navigation';
 import { ThemeSwitch } from './ThemeSwitch';
 import { Divider } from '../Divider';
@@ -29,8 +28,6 @@ const Home = styled(GatsbyLink)`
 `;
 
 const HeaderBar = () => {
-  const { darkMode } = useGlobalState();
-
   return (
     <header>
       <Wrapper>
@@ -38,7 +35,7 @@ const HeaderBar = () => {
         <Navigation />
         <ThemeSwitch />
       </Wrapper>
-      {darkMode && <Divider rainbow />}
+      <Divider rainbow />
     </header>
   );
 };

@@ -11,9 +11,10 @@
     "clean": "gatsby clean",
     "deploy": "yarn clean && yarn build:test && netlify deploy",
     "deploy:prod": "yarn clean && yarn build:prod && netlify deploy --prod",
-    "dev": "yarn build:functions && NODE_ENV=development && gatsby develop"
+    "dev": "yarn clean && yarn build:functions && NODE_ENV=development && gatsby develop"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "babel-plugin-styled-components": "^1.10.7",
     "dotenv": "^8.2.0",
     "gatsby": "^2.23.11",
