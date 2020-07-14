@@ -10,12 +10,17 @@ const Wrapper = styled.div`
   padding: 0 2rem;
   font-weight: 700;
   font-size: 0.95rem;
+
+  *:not(:last-child) {
+    padding-right: 1rem;
+  }
 `;
 
 const Navigation = () => {
   return (
     <Wrapper>
       <Link to="/rules">Pravidla</Link>
+      <Link to="/clan">Klan</Link>
     </Wrapper>
   );
 };

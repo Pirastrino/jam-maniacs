@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { SEO } from '../components';
 import { ClanRules } from '../components/ClanRules';
 
-const allRulesQuery = graphql`
+const allClanRulesQuery = graphql`
   {
     allClanRule {
       rules: nodes {
@@ -32,11 +32,11 @@ const Title = styled.h1`
 `;
 
 const RulesPage = () => {
-  const data = useStaticQuery(allRulesQuery);
+  const data = useStaticQuery(allClanRulesQuery);
 
   return (
     <>
-      <SEO title="Maniacs Brno | Pravidla" />
+      <SEO title="Maniacs Brno | Clan Rules" />
       <Wrapper>
         <Title>Pravidla</Title>
         <ClanRules data={data} />

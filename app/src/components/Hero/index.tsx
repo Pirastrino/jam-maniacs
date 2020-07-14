@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LazyImage } from '../LazyImage';
+import { ImageCloudinary } from '../LazyImage';
 import { Button } from '../Button';
 
 const Wrapper = styled.div`
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 
   @media (min-width: ${props => props.theme.respondUp.md}) {
     display: grid;
-    grid-template-columns: 1fr 50px 1fr;
+    grid-template-columns: 1fr 418px;
     grid-template-rows: 1fr;
     min-height: 420px;
     max-width: 900px;
@@ -37,15 +37,13 @@ const StyledDiv = styled.div`
   text-align: center;
 
   @media (min-width: ${props => props.theme.respondUp.md}) {
-    grid-column-start: 1;
-    grid-column-end: 3;
     text-align: left;
     align-items: flex-start;
     padding-top: 3rem;
   }
 `;
 
-const ImagePlaceholder = styled.div`
+const ImageHero = styled(ImageCloudinary)`
   display: none;
 
   @media (min-width: ${props => props.theme.respondUp.md}) {
@@ -66,9 +64,7 @@ const Hero = () => {
           </p>
           <Button to="/rules">Pravidla</Button>
         </StyledDiv>
-        <ImagePlaceholder>
-          <LazyImage name="hero-king" />
-        </ImagePlaceholder>
+        <ImageHero name="hero-king" />
       </Wrapper>
     </>
   );

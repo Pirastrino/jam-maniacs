@@ -8,6 +8,7 @@ const publicIdBase = process.env.CLOUDINARY_PUBLIC_ID_BASE;
 
 type Props = {
   name: string;
+  className?: string;
 };
 
 type ImgProps = {
@@ -44,7 +45,7 @@ const SmallImage = styled.img<ImgProps>`
   transition: opacity 300ms linear 0s;
 `;
 
-const LazyImage = ({ name }: Props) => {
+const ImageCloudinary = ({ name, className }: Props) => {
   const { generateUrl, url, isLoading, isError } = useImage({
     cloudName,
   });
@@ -62,7 +63,7 @@ const LazyImage = ({ name }: Props) => {
   if (isError) return null;
 
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       {!isLoading ? (
         <picture>
           <source srcSet={`${url}.webp`} type="image/webp" />
@@ -85,4 +86,4 @@ const LazyImage = ({ name }: Props) => {
   );
 };
 
-export { LazyImage };
+export { ImageCloudinary };

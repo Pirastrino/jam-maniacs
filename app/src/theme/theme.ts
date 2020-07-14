@@ -14,6 +14,7 @@ const theme: DefaultTheme = {
     xl: '1200px',
   },
   colors: {
+    blue: 'var(--blue)',
     red200: 'var(--red200)',
     red400: 'var(--red400)',
     yellow: 'var(--yellow)',
