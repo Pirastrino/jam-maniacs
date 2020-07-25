@@ -27,7 +27,7 @@ const GlobalStyles = createGlobalStyle`
       --bgPaperDark: #333333;
       --bgSwitch: #757575;
       --textButton: #2c2c2c;
-      --textDefault: #e9e9e9;
+      --textDefault: #ffffff;
       --textInverse: #2c2c2c;
       --textLink: #e9e9e9;
       --textLinkHover: #ffb300;
@@ -76,6 +76,10 @@ const GlobalStyles = createGlobalStyle`
     img{
       max-width: 100%;
       max-height: 100%;
+    }
+
+    svg {
+      display: block
     }
   }
 `;

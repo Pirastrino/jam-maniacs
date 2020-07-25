@@ -53,7 +53,7 @@ const ImageCloudinary = ({ name, className }: Props) => {
   const publicId = `${publicIdBase}/${name}`;
   const imgUrl = `https://res.cloudinary.com/${cloudName}/image/upload/w_50,q_1,f_auto/${publicId}`;
 
-  React.useEffect(() => {
+  useEffect(() => {
     generateUrl({
       publicId,
       transformations: {},
